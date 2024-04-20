@@ -131,6 +131,26 @@
     }
 }
 
+@keyframes turn-overlay-left-to-right-mobile {
+    from {
+        left: -100vw;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes turn-overlay-right-to-left-mobile {
+    from {
+        left: 100vw;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
 .page.turn-underlay {
     display: block;
     position: absolute;
@@ -199,6 +219,30 @@
         display: block;
     }
     .page-turner {
+        display: none;
+    }
+
+    .page.turn-underlay {
+        display: none;
+    }
+    .page.turn-overlay {
+        clip-path: none !important;
+        transform: none !important;
+        position: fixed;
+    }
+    .page.turn-overlay.left-to-right {
+        animation: turn-overlay-left-to-right-mobile 0.5s ease-out forwards;
+    }
+    .page.turn-overlay.right-to-left {
+        animation: turn-overlay-right-to-left-mobile 0.5s ease-out forwards;
+    }
+    .page.turn.left-to-right {
+        clip-path: none;
+    }
+    .page.turn.right-to-left {
+        clip-path: none;
+    }
+    .page.turn {
         display: none;
     }
 }

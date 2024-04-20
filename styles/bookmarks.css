@@ -6,7 +6,7 @@
     z-index: 1010;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     left: 0;
     display: flex;
     gap: 10px;
@@ -33,9 +33,6 @@
 .bookmark.active {
     margin-top: calc(var(--height) / -8);
 }
-.bookmark:hover {
-    margin-top: 0px;
-}
 
 .bookmark-img {
     width: 90%;
@@ -46,5 +43,12 @@
     #bookmarks {
         justify-content: center;
         padding-right: 0;
+    }
+}
+
+
+@media not all and (pointer: coarse) {
+    .bookmark:hover {
+        margin-top: 0px;
     }
 }

@@ -1,5 +1,7 @@
 
 let currentPage = 0;
+document.dispatchEvent(new CustomEvent("turnToPage", { detail: { page: currentPage } }));
+
 const [prev, next] = document.querySelectorAll(".page-turner");
 prev.addEventListener("click", () => turnPage(-1));
 next.addEventListener("click", () => turnPage(1));
@@ -32,7 +34,7 @@ function turnPage(direction) {
     cloneCurrent.style.zIndex = zIndexUnderlay--;
     main.appendChild(cloneNext);
     main.appendChild(cloneCurrent);
-    
+
     let curr = currentPage;
     setTimeout(() => {
         pages[curr].classList.remove("active");
@@ -43,19 +45,19 @@ function turnPage(direction) {
         main.removeChild(cloneCurrent);
         isTurningInDirection -= direction;
 
-        if(isTurningInDirection === 0){
+        if (isTurningInDirection === 0) {
             zIndexUnderlay = 99;
             zIndexOverlay = 100;
             zIndexNextPage = 10;
         }
-    }, 1000);
+    }, window.matchMedia("(pointer: coarse)").matches ? 500 : 1000);
 
     currentPage = nextPage;
-    document.dispatchEvent(new CustomEvent("turnToPage", {detail: {page: currentPage}}));
+    document.dispatchEvent(new CustomEvent("turnToPage", { detail: { page: currentPage } }));
 }
 
 function turnToPage(nextPage) {
-    if(isNaN(nextPage)) return;
+    if (isNaN(nextPage)) return;
     nextPage = Math.max(0, Math.min(nextPage, pages.length - 1));
     if (nextPage === currentPage) return;
 
