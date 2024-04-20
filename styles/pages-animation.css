@@ -5,10 +5,24 @@
     top: 0;
     left: 50vw;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
 
 .page-turner:first-of-type {
+    justify-content: left;
     left: 0;
+}
+
+.page-turner:first-of-type img {
+    transform: rotate(180deg);
+}
+.page-turner img {
+    max-height: 10vh;
+}
+.page-turner:hover img {
+    filter: brightness(0) saturate(100%) invert(19%) sepia(1%) saturate(0%) hue-rotate(263deg) brightness(91%) contrast(88%);
 }
 
 .page.turn-overlay {
