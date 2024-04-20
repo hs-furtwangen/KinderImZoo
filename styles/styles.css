@@ -3,12 +3,17 @@ body {
     padding: 0px;
     margin: 0px;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
     /* font-family: "Chilanka", cursive; */
     user-select: none;
 }
 
 * {
     box-sizing: border-box;
+}
+
+main {
+    position: relative;
 }
