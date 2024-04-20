@@ -51,9 +51,11 @@ function turnPage(direction) {
     }, 1000);
 
     currentPage = nextPage;
+    document.dispatchEvent(new CustomEvent("turnToPage", {detail: {page: currentPage}}));
 }
 
 function turnToPage(nextPage) {
+    if(isNaN(nextPage)) return;
     nextPage = Math.max(0, Math.min(nextPage, pages.length - 1));
     if (nextPage === currentPage) return;
 
@@ -63,7 +65,6 @@ function turnToPage(nextPage) {
         setTimeout(() => {
             turnPage(direction);
         }, 100 * counter++);
-
     }
 }
 
