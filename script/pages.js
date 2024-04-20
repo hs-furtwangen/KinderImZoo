@@ -9,43 +9,69 @@ const main = document.getElementById("main");
 const swipeOverlay = document.getElementById("page-swiper");
 swipeOverlay.addEventListener("swiped", swipeHandler);
 
+let isTurningInDirection = 0;
+let zIndexUnderlay = 99;
+let zIndexOverlay = 100;
+let zIndexNextPage = 10;
 function turnPage(direction) {
-    turnToPage(currentPage + direction);
-}
+    direction = Math.sign(direction);
+    if (isTurningInDirection !== 0 && Math.sign(isTurningInDirection) !== direction) return;
 
-let isTurningAPage = false;
-function turnToPage(nextPage) {
-    if (isTurningAPage) return;
-    nextPage = Math.max(0, Math.min(nextPage, pages.length - 1));
+    let nextPage = Math.max(0, Math.min(currentPage + direction, pages.length - 1));
     if (nextPage === currentPage) return;
-    isTurningAPage = true;
+
+    isTurningInDirection += direction;
 
     let cloneNext = pages[nextPage].cloneNode(true);
     let cloneCurrent = pages[currentPage].cloneNode(true);
     pages[nextPage].classList.add("turn", nextPage > currentPage ? "right-to-left" : "left-to-right");
+    pages[nextPage].style.zIndex = zIndexNextPage++;
     cloneNext.classList.add("turn-overlay", nextPage > currentPage ? "right-to-left" : "left-to-right");
     cloneCurrent.classList.add("turn-underlay", nextPage > currentPage ? "right-to-left" : "left-to-right");
+    cloneNext.style.zIndex = zIndexOverlay++;
+    cloneCurrent.style.zIndex = zIndexUnderlay--;
     main.appendChild(cloneNext);
     main.appendChild(cloneCurrent);
-
+    
     let curr = currentPage;
     setTimeout(() => {
         pages[curr].classList.remove("active");
+        pages[nextPage].style.zIndex = "";
         pages[nextPage].classList.add("active");
         pages[nextPage].classList.remove("turn", "right-to-left", "left-to-right");
         main.removeChild(cloneNext);
         main.removeChild(cloneCurrent);
-        isTurningAPage = false;
+        isTurningInDirection -= direction;
+
+        if(isTurningInDirection === 0){
+            zIndexUnderlay = 99;
+            zIndexOverlay = 100;
+            zIndexNextPage = 10;
+        }
     }, 1000);
 
     currentPage = nextPage;
 }
 
-function swipeHandler(_event){
-    if(_event.detail.dir === "left"){
+function turnToPage(nextPage) {
+    nextPage = Math.max(0, Math.min(nextPage, pages.length - 1));
+    if (nextPage === currentPage) return;
+
+    let direction = Math.sign(nextPage - currentPage);
+    let counter = 0;
+    for (let page = currentPage; page !== nextPage; page += direction) {
+        setTimeout(() => {
+            turnPage(direction);
+        }, 100 * counter++);
+
+    }
+}
+
+function swipeHandler(_event) {
+    if (_event.detail.dir === "left") {
         turnPage(1);
     }
-    else if(_event.detail.dir === "right"){
+    else if (_event.detail.dir === "right") {
         turnPage(-1);
     }
 }
