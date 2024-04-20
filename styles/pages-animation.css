@@ -11,18 +11,6 @@
     left: 0;
 }
 
-.page {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    background-color: whitesmoke;
-}
-
-.page.active {
-    display: block;
-}
-
 .page.turn-overlay {
     display: block;
     position: absolute;

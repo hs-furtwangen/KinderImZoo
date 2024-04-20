@@ -6,7 +6,7 @@ body {
     height: 100vh;
     overflow: hidden;
     /* font-family: "Chilanka", cursive; */
-    /* user-select: none; */
+    user-select: none;
 }
 
 * {
