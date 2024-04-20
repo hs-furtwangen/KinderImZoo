@@ -6,6 +6,8 @@ next.addEventListener("click", () => turnPage(1));
 
 const pages = document.querySelectorAll(".page");
 const main = document.getElementById("main");
+const swipeOverlay = document.getElementById("page-swiper");
+swipeOverlay.addEventListener("swiped", swipeHandler);
 
 function turnPage(direction) {
     turnToPage(currentPage + direction);
@@ -34,7 +36,16 @@ function turnToPage(nextPage) {
         main.removeChild(cloneNext);
         main.removeChild(cloneCurrent);
         isTurningAPage = false;
-    }, 1500);
+    }, 1000);
 
     currentPage = nextPage;
+}
+
+function swipeHandler(_event){
+    if(_event.detail.dir === "left"){
+        turnPage(1);
+    }
+    else if(_event.detail.dir === "right"){
+        turnPage(-1);
+    }
 }

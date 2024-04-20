@@ -101,13 +101,13 @@
 
 .page.turn-overlay.left-to-right {
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-    animation: turn-overlay-left-to-right 0.75s ease-out 0.75s forwards;
+    animation: turn-overlay-left-to-right 0.5s ease-out 0.5s forwards;
     transform: rotate3d(0, 1, 0, -90deg);
 }
 
 .page.turn-overlay.right-to-left {
     clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-    animation: turn-overlay-right-to-left 0.75s ease-out 0.75s forwards;
+    animation: turn-overlay-right-to-left 0.5s ease-out 0.5s forwards;
     transform: rotate3d(0, 1, 0, 90deg);
 }
 
@@ -140,12 +140,12 @@
 }
 .page.turn-underlay.left-to-right {
     clip-path: polygon(50% 0, 0 0, 0 100%, 50% 100%);
-    animation: turn-underlay-left-to-right 0.75s ease-in forwards;
+    animation: turn-underlay-left-to-right 0.5s ease-in forwards;
 }
 
 .page.turn-underlay.right-to-left {
     clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
-    animation: turn-underlay-right-to-left 0.75s ease-in forwards;
+    animation: turn-underlay-right-to-left 0.5s ease-in forwards;
 }
 
 @keyframes turn-underlay-left-to-right {
@@ -182,4 +182,23 @@
 
 .page.turn.right-to-left {
     clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
+}
+
+.page-swiper {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+@media (pointer: coarse) {
+    .page-swiper {
+        display: block;
+    }
+    .page-turner {
+        display: none;
+    }
 }
