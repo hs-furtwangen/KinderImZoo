@@ -1,3 +1,5 @@
+document.addEventListener("keydown", keyDown);
+
 
 let currentPage = 0;
 document.dispatchEvent(new CustomEvent("turnToPage", { detail: { page: currentPage } }));
@@ -75,6 +77,16 @@ function swipeHandler(_event) {
         turnPage(1);
     }
     else if (_event.detail.dir === "right") {
+        turnPage(-1);
+    }
+}
+
+function keyDown(_event){
+    if(_event.keyCode === 39) {
+        // -> 
+        turnPage(1);
+    } else if(_event.keyCode === 37) {
+        // <- 
         turnPage(-1);
     }
 }
