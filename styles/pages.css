@@ -1,9 +1,11 @@
+/* GENERAL */
 .page {
     position: relative;
     width: 100vw;
     min-height: 100vh;
     display: none;
     background-color: whitesmoke;
+    flex-direction: column;
 }
 
 .page.active {
@@ -32,4 +34,48 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* INDIVIDUAL PAGES */
+/* start page */
+
+#start-page {
+    justify-content: center;
+    align-items: center;
+}
+
+.start-page-animal {
+    position: absolute;
+}
+
+#start-page-title {
+    max-width: 80vw;
+    max-height: 80vh;
+    object-fit: contain;
+    z-index: 3;
+}
+#start-page-snake {
+    height: min(41vh, 442px, 30vw);
+    top: min(20vh, 220px);
+    left: 0;
+}
+#start-page-bat {
+    height: min(22vh, 240px, 30vw);
+    top: 0;
+    right: min(20vw, 380px);
+}
+#start-page-lion {
+    height: min(25vh, 267px, 40vw);
+    bottom: 0;
+    left: min(10vw, 190px);
+}
+#start-page-bear {
+    height: min(36vh, 389px, 40vw);
+    top: min(30vh, 324px);
+    right: 0;
 }

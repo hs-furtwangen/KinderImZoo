@@ -16,21 +16,30 @@
 <body>
     <header>
         <div id="bookmarks">
-            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: whitesmoke;" data-page="1" data-page-to="3"><img class="bookmark-img" src="assets/img/icon/Affe.svg" alt="Animal"></div></div>
-            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: blueviolet;" data-page="4" data-page-to="6"><img class="bookmark-img" src="assets/img/icon/Eisbar.svg" alt="Animal"></div></div>
-            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: brown;" data-page="7" data-page-to="9"><img class="bookmark-img" src="assets/img/icon/Elefant.svg" alt="Animal"></div></div>
-            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: chocolate;" data-page="10" data-page-to="12"><img class="bookmark-img" src="assets/img/icon/Orka.svg" alt="Animal"></div></div>
-            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: green;" data-page="13" data-page-to="15"><img class="bookmark-img" src="assets/img/icon/Pinguin.svg" alt="Animal"></div></div>
-            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: hotpink;" data-page="16" data-page-to="18"><img class="bookmark-img" src="assets/img/icon/Strauss.svg" alt="Animal"></div></div>
+            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: whitesmoke;" data-page="2" data-page-to="4"><img class="bookmark-img" src="assets/img/icon/Affe.svg" alt="Animal"></div></div>
+            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: blueviolet;" data-page="5" data-page-to="7"><img class="bookmark-img" src="assets/img/icon/Eisbar.svg" alt="Animal"></div></div>
+            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: brown;" data-page="8" data-page-to="10"><img class="bookmark-img" src="assets/img/icon/Elefant.svg" alt="Animal"></div></div>
+            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: chocolate;" data-page="11" data-page-to="13"><img class="bookmark-img" src="assets/img/icon/Orka.svg" alt="Animal"></div></div>
+            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: green;" data-page="14" data-page-to="16"><img class="bookmark-img" src="assets/img/icon/Pinguin.svg" alt="Animal"></div></div>
+            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: hotpink;" data-page="17" data-page-to="19"><img class="bookmark-img" src="assets/img/icon/Strauss.svg" alt="Animal"></div></div>
         </div>
     </header>
     <main id="main">
-        <div class="page-turner"><img src="assets/img/icon/Pfeil.svg" alt=" "></div>
-        <div class="page-turner"><img src="assets/img/icon/Pfeil.svg" alt=" "></div>
+        <div class="page-turner" id="page-turner-left"><img src="assets/img/icon/Pfeil.svg" alt=" "></div>
+        <div class="page-turner" id="page-turner-right"><img src="assets/img/icon/Pfeil.svg" alt=" "></div>
         <div class="page-swiper" id="page-swiper"></div>
-        <div class="page active">
+        <div class="page active" id="start-page">
             <!-- start page -->
-            start page
+            <!-- <div class="background overlay" style="background-image: url('assets/img/MediaJam_Title_Text.png');"></div> -->
+            <img id="start-page-title" src="assets/img/MediaJam_Title_Text.png" alt="">
+            <img class="start-page-animal" id="start-page-bat" src="assets/img/MediaJam_Title_Bat.png" alt="">
+            <img class="start-page-animal" id="start-page-bear" src="assets/img/MediaJam_Title_Bear.png" alt="">
+            <img class="start-page-animal" id="start-page-lion" src="assets/img/MediaJam_Title_Lion.png" alt="">
+            <img class="start-page-animal" id="start-page-snake" src="assets/img/MediaJam_Title_Snake.png" alt="">
+        </div>
+        <div class="page" id="zoo-page">
+            <!-- zoo page -->
+            <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Page1.png');"></div>
         </div>
 
         <!-- monkey -->

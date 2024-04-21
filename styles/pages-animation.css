@@ -10,16 +10,18 @@
     justify-content: right;
 }
 
-.page-turner:first-of-type {
+#page-turner-left {
     justify-content: left;
     left: 0;
 }
 
-.page-turner:first-of-type img {
+#page-turner-left img {
     transform: rotate(180deg);
 }
 .page-turner img {
     max-height: 10vh;
+    filter: opacity(0);
+    padding: 0.5rem;
 }
 .page-turner:hover img {
     filter: brightness(0) saturate(100%) invert(19%) sepia(1%) saturate(0%) hue-rotate(263deg) brightness(91%) contrast(88%);

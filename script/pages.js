@@ -1,5 +1,8 @@
-document.addEventListener("keydown", keyDown);
+let pageTurnerLeft = document.getElementById("page-turner-left");
+let pageTurnerRight = document.getElementById("page-turner-right");
 
+document.addEventListener("keydown", keyDown);
+document.addEventListener("turnToPage", checkHiddenPageTurner);
 
 let currentPage = 0;
 document.dispatchEvent(new CustomEvent("turnToPage", { detail: { page: currentPage } }));
@@ -88,5 +91,16 @@ function keyDown(_event){
     } else if(_event.keyCode === 37) {
         // <- 
         turnPage(-1);
+    }
+}
+
+
+function checkHiddenPageTurner(_event){
+    pageTurnerLeft.classList.remove("hidden");
+    pageTurnerRight.classList.remove("hidden");
+    if(_event.detail.page === 0) {
+        pageTurnerLeft.classList.add("hidden");
+    } else if(_event.detail.page === 19) {
+        pageTurnerRight.classList.add("hidden");
     }
 }
