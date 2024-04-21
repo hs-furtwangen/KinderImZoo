@@ -26,7 +26,7 @@
 }
 
 .page.turn-overlay {
-    display: block;
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
@@ -67,7 +67,7 @@
 }
 
 .page.turn {
-    display: block;
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
@@ -155,7 +155,7 @@
 }
 
 .page.turn-underlay {
-    display: block;
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
@@ -193,7 +193,7 @@
 
 
 .page.turn {
-    display: block;
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
