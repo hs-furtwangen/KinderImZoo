@@ -1,9 +1,9 @@
 .page-turner {
     position: absolute;
-    width: 50vw;
+    width: 20vw;
     height: 100vh;
     top: 0;
-    left: 50vw;
+    left: 80vw;
     z-index: 1000;
     display: flex;
     align-items: center;

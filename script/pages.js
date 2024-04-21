@@ -1,5 +1,6 @@
 let pageTurnerLeft = document.getElementById("page-turner-left");
 let pageTurnerRight = document.getElementById("page-turner-right");
+let totalPages = document.querySelectorAll(".page").length;
 
 document.addEventListener("keydown", keyDown);
 document.addEventListener("turnToPage", checkHiddenPageTurner);
@@ -100,7 +101,7 @@ function checkHiddenPageTurner(_event){
     pageTurnerRight.classList.remove("hidden");
     if(_event.detail.page === 0) {
         pageTurnerLeft.classList.add("hidden");
-    } else if(_event.detail.page === 19) {
+    } else if(_event.detail.page === totalPages - 1) {
         pageTurnerRight.classList.add("hidden");
     }
 }
