@@ -67,7 +67,7 @@
 #start-page-bat {
     height: min(22vh, 240px, 30vw);
     top: 0;
-    right: min(20vw, 380px);
+    right: /* make sure we're to the left of the bookmarks*/ calc(6 * (50px + 10px));
 }
 #start-page-lion {
     height: min(25vh, 267px, 40vw);
@@ -79,3 +79,11 @@
     top: min(30vh, 324px);
     right: 0;
 }
+
+
+@media screen and (max-width: 780px) {
+    #start-page-bat {
+        display: none;
+    }
+}
+
