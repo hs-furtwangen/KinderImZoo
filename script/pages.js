@@ -30,6 +30,8 @@ function turnPage(direction) {
 
     isTurningInDirection += direction;
 
+    speechbubble(pages[nextPage])
+
     let cloneNext = pages[nextPage].cloneNode(true);
     let cloneCurrent = pages[currentPage].cloneNode(true);
     pages[nextPage].classList.add("turn", nextPage > currentPage ? "right-to-left" : "left-to-right");
@@ -85,23 +87,32 @@ function swipeHandler(_event) {
     }
 }
 
-function keyDown(_event){
-    if(_event.keyCode === 39) {
+function keyDown(_event) {
+    if (_event.keyCode === 39) {
         // -> 
         turnPage(1);
-    } else if(_event.keyCode === 37) {
+    } else if (_event.keyCode === 37) {
         // <- 
         turnPage(-1);
     }
 }
 
 
-function checkHiddenPageTurner(_event){
+function checkHiddenPageTurner(_event) {
     pageTurnerLeft.classList.remove("hidden");
     pageTurnerRight.classList.remove("hidden");
-    if(_event.detail.page === 0) {
+    if (_event.detail.page === 0) {
         pageTurnerLeft.classList.add("hidden");
-    } else if(_event.detail.page === totalPages - 1) {
+    } else if (_event.detail.page === totalPages - 1) {
         pageTurnerRight.classList.add("hidden");
     }
+}
+
+let bubbles = ["assets/img/sprechblase_einsam.png", "assets/img/sprechblase_spielen.png", "assets/img/sprechblase_gelangweilt.png"]
+
+function speechbubble(element) {
+    if (!element) return;
+    let speechbubble = element.querySelector(".speechbubble")
+    if (!speechbubble) return
+    speechbubble.src = bubbles[Math.floor(Math.random() * bubbles.length)];
 }

@@ -45,6 +45,7 @@ main {
     flex-grow: 1;
     text-align: left;
     padding: 1em;
+    font-size: 4vh;
 
     display: flex;
     flex-direction: column;
@@ -55,6 +56,12 @@ main {
     display: none !important;
 }
 
+.speechbubble {
+    position: absolute;
+    z-index: 9;
+    width: 30%;
+    top: 35%;
+}
 
 /* INDIVIDUAL PAGES */
 /* start page */
@@ -108,4 +115,19 @@ main {
     flex-direction: row;
     gap: 10px;
     justify-content: center;
+}
+
+#credits {
+    text-align: center;
+    font-size: 2vh;
+}
+
+#credit-images {
+    display: flex;
+}
+.credit {
+    max-width: 20%;
+}
+.credit > img {
+    width: 100%;
 }
