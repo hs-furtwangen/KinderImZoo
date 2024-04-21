@@ -45,6 +45,7 @@ main {
     flex-grow: 1;
     text-align: left;
     padding: 1em;
+    font-size: 4vh;
 
     display: flex;
     flex-direction: column;
@@ -55,6 +56,12 @@ main {
     display: none !important;
 }
 
+.speechbubble {
+    position: absolute;
+    z-index: 9;
+    width: 30%;
+    top: 35%;
+}
 
 /* INDIVIDUAL PAGES */
 /* start page */
@@ -107,5 +114,32 @@ main {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+
+#credits {
+    text-align: center;
+    font-size: 3.5vh;
+}
+
+#credit-images {
+    display: flex;
+}
+.credit {
+    max-width: 18%;
+}
+.credit > img {
+    width: 100%;
+}
+
+#photo-credits {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#credit-images .credit:nth-of-type(1) {
+    transform: translateY(10vh);
+}
+#credit-images .credit:nth-of-type(4) {
+    transform: translateY(10vh);
 }
