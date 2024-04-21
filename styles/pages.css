@@ -119,15 +119,23 @@ main {
 
 #credits {
     text-align: center;
-    font-size: 2vh;
+    font-size: 3.5vh;
 }
 
 #credit-images {
     display: flex;
 }
 .credit {
-    max-width: 20%;
+    max-width: 18%;
 }
 .credit > img {
     width: 100%;
+}
+
+#photo-credits {
+    display: flex;
+    justify-content: center;
+}
+#photo-credits p {
+    /* flex-grow: 1; */
 }
