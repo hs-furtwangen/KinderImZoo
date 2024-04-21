@@ -4,9 +4,9 @@
     --height: 100px;
 
     z-index: 1010;
-    position: fixed;
+    position: absolute;
     top: 0;
-    width: 100vw;
+    width: 100%;
     left: 0;
     display: flex;
     gap: 10px;
@@ -23,7 +23,7 @@
     height: var(--height);
     width: var(--width);
     clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
-    background-color: #cd2626;
+    background-color: darkred;
     margin-top: calc(var(--height) / -4);
     transition: margin 0.2s ease;
     cursor: pointer;

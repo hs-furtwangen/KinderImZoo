@@ -13,7 +13,7 @@ prev.addEventListener("click", () => turnPage(-1));
 next.addEventListener("click", () => turnPage(1));
 
 const pages = document.querySelectorAll(".page");
-const main = document.getElementById("main");
+const pageWrapper = document.getElementById("page-wrapper");
 const swipeOverlay = document.getElementById("page-swiper");
 swipeOverlay.addEventListener("swiped", swipeHandler);
 
@@ -38,8 +38,8 @@ function turnPage(direction) {
     cloneCurrent.classList.add("turn-underlay", nextPage > currentPage ? "right-to-left" : "left-to-right");
     cloneNext.style.zIndex = zIndexOverlay++;
     cloneCurrent.style.zIndex = zIndexUnderlay--;
-    main.appendChild(cloneNext);
-    main.appendChild(cloneCurrent);
+    pageWrapper.appendChild(cloneNext);
+    pageWrapper.appendChild(cloneCurrent);
 
     let curr = currentPage;
     setTimeout(() => {
@@ -47,8 +47,8 @@ function turnPage(direction) {
         pages[nextPage].style.zIndex = "";
         pages[nextPage].classList.add("active");
         pages[nextPage].classList.remove("turn", "right-to-left", "left-to-right");
-        main.removeChild(cloneNext);
-        main.removeChild(cloneCurrent);
+        pageWrapper.removeChild(cloneNext);
+        pageWrapper.removeChild(cloneCurrent);
         isTurningInDirection -= direction;
 
         if (isTurningInDirection === 0) {

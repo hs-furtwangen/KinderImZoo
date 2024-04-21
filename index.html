@@ -15,137 +15,167 @@
 </head>
 <body>
     <header>
-        <div id="bookmarks">
-            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: whitesmoke;" data-page="2" data-page-to="4"><img class="bookmark-img" src="assets/img/icon/Affe.svg" alt="Animal"></div></div>
-            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: blueviolet;" data-page="5" data-page-to="7"><img class="bookmark-img" src="assets/img/icon/Eisbar.svg" alt="Animal"></div></div>
-            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: brown;" data-page="8" data-page-to="10"><img class="bookmark-img" src="assets/img/icon/Elefant.svg" alt="Animal"></div></div>
-            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: chocolate;" data-page="11" data-page-to="13"><img class="bookmark-img" src="assets/img/icon/Orka.svg" alt="Animal"></div></div>
-            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: green;" data-page="14" data-page-to="16"><img class="bookmark-img" src="assets/img/icon/Pinguin.svg" alt="Animal"></div></div>
-            <div class="bookmark-wrapper"><div class="bookmark" style="background-color: hotpink;" data-page="17" data-page-to="19"><img class="bookmark-img" src="assets/img/icon/Strauss.svg" alt="Animal"></div></div>
-        </div>
     </header>
     <main id="main">
-        <div class="page-turner" id="page-turner-left"><img src="assets/img/icon/Pfeil.svg" alt=" "></div>
-        <div class="page-turner" id="page-turner-right"><img src="assets/img/icon/Pfeil.svg" alt=" "></div>
-        <div class="page-swiper" id="page-swiper"></div>
-        <div class="page active" id="start-page">
-            <!-- start page -->
-            <!-- <div class="background overlay" style="background-image: url('assets/img/MediaJam_Title_Text.png');"></div> -->
-            <img id="start-page-title" src="assets/img/MediaJam_Title_Text.png" alt="">
-            <img class="start-page-animal" id="start-page-bat" src="assets/img/MediaJam_Title_Bat.png" alt="">
-            <img class="start-page-animal" id="start-page-bear" src="assets/img/MediaJam_Title_Bear.png" alt="">
-            <img class="start-page-animal" id="start-page-lion" src="assets/img/MediaJam_Title_Lion.png" alt="">
-            <img class="start-page-animal" id="start-page-snake" src="assets/img/MediaJam_Title_Snake.png" alt="">
-        </div>
-        <div class="page" id="zoo-page">
-            <!-- zoo page -->
-            <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Page1.png');"></div>
-        </div>
-        
-        <!-- monkey -->
-        <div class="page">
-            <!-- sad monkey -->
-            <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Ape.png');"></div>
-            <div class="background overlay" style="background-image: url('assets/video/affe.gif');"></div>
-        </div>
-        <div class="page">
-            <!-- happy monkey -->
-            <a href="https://youtu.be/zBkaC80Ew2g" target="_blank" rel="noopener noreferrer">
-                <div class="background" style="background-image: url('assets/img/monkey_happy.png');"></div>
-            </a>
-        </div>
-        <div class="page facts-wrapper">
-            <!-- monkey facts -->
-            <div class="facts">
-                <p>monkey facts</p>
+        <div id="page-wrapper">
+            <div id="bookmarks">
+                <div class="bookmark-wrapper"><div class="bookmark" data-page="2" data-page-to="4"><img class="bookmark-img" src="assets/img/icon/Affe.svg" alt="Animal"></div></div>
+                <div class="bookmark-wrapper"><div class="bookmark" data-page="5" data-page-to="7"><img class="bookmark-img" src="assets/img/icon/Eisbar.svg" alt="Animal"></div></div>
+                <div class="bookmark-wrapper"><div class="bookmark" data-page="8" data-page-to="10"><img class="bookmark-img" src="assets/img/icon/Elefant.svg" alt="Animal"></div></div>
+                <div class="bookmark-wrapper"><div class="bookmark" data-page="11" data-page-to="13"><img class="bookmark-img" src="assets/img/icon/Orka.svg" alt="Animal"></div></div>
+                <div class="bookmark-wrapper"><div class="bookmark" data-page="14" data-page-to="16"><img class="bookmark-img" src="assets/img/icon/Pinguin.svg" alt="Animal"></div></div>
+                <div class="bookmark-wrapper"><div class="bookmark" data-page="17" data-page-to="19"><img class="bookmark-img" src="assets/img/icon/Strauss.svg" alt="Animal"></div></div>
             </div>
-        </div>
-        
-        <!-- polar bear -->
-        <div class="page">
-            <!-- sad polar bear -->
-            <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Ape.png');"></div>
-            <div class="background overlay" style="background-image: url('assets/video/affe.gif');"></div>
-        </div>
-        <div class="page">
-            <!-- happy polar bear -->
-            <div class="background" style="background-image: url('assets/img/monkey_happy.png');"></div>
-        </div>
-        <div class="page facts-wrapper">
-            <!-- polar bear facts -->
-            <div class="facts">
-                <p>polarbear facts</p>
+            <div class="page-turner" id="page-turner-left"><img src="assets/img/icon/Pfeil.svg" alt=" "></div>
+            <div class="page-turner" id="page-turner-right"><img src="assets/img/icon/Pfeil.svg" alt=" "></div>
+            <div class="page-swiper" id="page-swiper"></div>
+            <div class="page active" id="start-page">
+                <!-- start page -->
+                <!-- <div class="background overlay" style="background-image: url('assets/img/MediaJam_Title_Text.png');"></div> -->
+                <img id="start-page-title" src="assets/img/MediaJam_Title_Text.png" alt="">
+                <img class="start-page-animal" id="start-page-bat" src="assets/img/MediaJam_Title_Bat.png" alt="">
+                <img class="start-page-animal" id="start-page-bear" src="assets/img/MediaJam_Title_Bear.png" alt="">
+                <img class="start-page-animal" id="start-page-lion" src="assets/img/MediaJam_Title_Lion.png" alt="">
+                <img class="start-page-animal" id="start-page-snake" src="assets/img/MediaJam_Title_Snake.png" alt="">
             </div>
-        </div>
-        
-        <!-- elephant -->
-        <div class="page">
-            <!-- sad elephant -->
-            <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Ape.png');"></div>
-            <div class="background overlay" style="background-image: url('assets/video/Elefant.gif');"></div>
-        </div>
-        <div class="page">
-            <!-- happy elephant -->
-            <div class="background" style="background-image: url('assets/img/monkey_happy.png');"></div>
-        </div>
-        <div class="page facts-wrapper">
-            <!-- elephant facts -->
-            <div class="facts">
-                <p>elephant facts</p>
+            <div class="page" id="zoo-page">
+                <!-- zoo page -->
+                <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Page1.png');"></div>
             </div>
-        </div>
-        
-        <!-- orca -->
-        <div class="page">
-            <!-- sad orca -->
-            <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Orca.png');"></div>
-            <div class="background overlay" style="background-image: url('assets/img/orca.png');"></div>
-        </div>
-        <div class="page">
-            <!-- happy orca -->
-            <a href="https://youtu.be/KfohQP7XY7U" target="_blank" rel="noopener noreferrer">
-                <div class="background" style="background-image: url('assets/img/orca_happy.png');"></div>
-            </a>
-        </div>
-        <div class="page facts-wrapper">
-            <!-- orca facts -->
-            <div class="facts">
-                <p>orca facts</p>
+            
+            <!-- monkey -->
+            <div class="page">
+                <!-- sad monkey -->
+                <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Ape.png');"></div>
+                <div class="background overlay" style="background-image: url('assets/video/affe.gif');"></div>
             </div>
-        </div>
+            <div class="page">
+                <!-- happy monkey -->
+                <a href="https://www.youtube.com/watch?v=zBkaC80Ew2g&t=1177s" target="_blank" rel="noopener noreferrer">
+                    <div class="background" style="background-image: url('assets/raw/chimp_photo.jpg');"></div>
+                </a>
+            </div>
+            <div class="page facts-wrapper">
+                <!-- monkey facts -->
+                <div class="facts">
+                    <h2>Schimpansen</h2>
+                    <ul>
+                        <li>
+                            leben in großen Gruppen von 20 bis 150 Tieren
+                        </li>
+                        <li>
+                            bewegen sich üblicherweise in einem Bereich von drei bis fünf Quadratkilometern.
+                        </li>
+                        <li>
+                            sind unsere nächsten lebenden Verwandten im Tierreich. Wir teilen ca. 98% unserer DNA mit ihnen, was auf eine gemeinsame evolutionäre Geschichte hinweist. Zusätzlich zu genetischen Ähnlichkeiten zeigen Schimpansen auch komplexe soziale Strukturen, kognitive Fähigkeiten und sogar Verhaltensweisen, die denen der Menschen ähneln. Ihre Fähigkeit zur Werkzeugnutzung, sozialen Interaktion und emotionalen Ausdruck macht sie zu faszinierenden Lebewesen, die uns viel über uns selbst und unsere Evolution lehren können.
+                        </li>
+                    </ul>
+                    <p></p>
+                </div>
+            </div>
+            
+            <!-- polar bear -->
+            <div class="page">
+                <!-- sad polar bear -->
+                <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Ape.png');"></div>
+                <div class="background overlay" style="background-image: url('assets/video/affe.gif');"></div>
+            </div>
+            <div class="page">
+                <!-- happy polar bear -->
+                <div class="background" style="background-image: url('assets/raw/chimp_photo.jpg');"></div>
+            </div>
+            <div class="page facts-wrapper">
+                <!-- polar bear facts -->
+                <div class="facts">
+                    <p>polarbear facts</p>
+                </div>
+            </div>
+            
+            <!-- elephant -->
+            <div class="page">
+                <!-- sad elephant -->
+                <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Ape.png');"></div>
+                <div class="background overlay" style="background-image: url('assets/video/Elefant.gif');"></div>
+            </div>
+            <div class="page">
+                <!-- happy elephant -->
+                <div class="background" style="background-image: url('assets/raw/chimp_photo.jpg');"></div>
+            </div>
+            <div class="page facts-wrapper">
+                <!-- elephant facts -->
+                <div class="facts">
+                    <p>elephant facts</p>
+                </div>
+            </div>
+            
+            <!-- orca -->
+            <div class="page">
+                <!-- sad orca -->
+                <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Orca.png');"></div>
+                <div class="background overlay" style="background-image: url('assets/img/orca.png');"></div>
+            </div>
+            <div class="page">
+                <!-- happy orca -->
+                <a href="https://youtu.be/KfohQP7XY7U" target="_blank" rel="noopener noreferrer">
+                    <div class="background" style="background-image: url('assets/raw/orca_photo.jpg');"></div>
+                </a>
+            </div>
+            <div class="page facts-wrapper">
+                <!-- orca facts -->
+                <div class="facts">
+                    <p>orca facts</p>
+                </div>
+            </div>
 
-        <!-- penguin -->
-        <div class="page">
-            <!-- sad penguin -->
-            <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Ape.png');"></div>
-            <div class="background overlay" style="background-image: url('assets/video/affe.gif');"></div>
-        </div>
-        <div class="page">
-            <!-- happy penguin -->
-            <div class="background" style="background-image: url('assets/img/monkey_happy.png');"></div>
-        </div>
-        <div class="page facts-wrapper">
-            <!-- penguin facts -->
-            <div class="facts">
-                <p>penguin facts</p>
+            <!-- penguin -->
+            <div class="page">
+                <!-- sad penguin -->
+                <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Ape.png');"></div>
+                <div class="background overlay" style="background-image: url('assets/video/affe.gif');"></div>
             </div>
-        </div>
+            <div class="page">
+                <!-- happy penguin -->
+                <div class="background" style="background-image: url('assets/raw/chimp_photo.jpg');"></div>
+            </div>
+            <div class="page facts-wrapper">
+                <!-- penguin facts -->
+                <div class="facts">
+                    <p>penguin facts</p>
+                </div>
+            </div>
 
-        <!-- ostrich -->
-        <div class="page">
-            <!-- sad ostrich -->
-            <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Ape.png');"></div>
-            <div class="background overlay" style="background-image: url('assets/video/Strauss.gif');"></div>
-        </div>
-        <div class="page">
-            <!-- happy ostrich -->
-            <div class="background" style="background-image: url('assets/img/monkey_happy.png');"></div>
-        </div>
-        <div class="page facts-wrapper">
-            <!-- ostrich facts -->
-            <div class="facts">
-                <p>ostrich facts</p>
+            <!-- ostrich -->
+            <div class="page">
+                <!-- sad ostrich -->
+                <div class="background" style="background-image: url('assets/img/MediaJam_Bookpages_Ape.png');"></div>
+                <div class="background overlay" style="background-image: url('assets/video/Strauss.gif');"></div>
             </div>
+            <div class="page">
+                <!-- happy ostrich -->
+                <div class="background" style="background-image: url('assets/raw/chimp_photo.jpg');"></div>
+            </div>
+            <div class="page facts-wrapper">
+                <!-- ostrich facts -->
+                <div class="facts">
+                    <p>ostrich facts</p>
+                </div>
+            </div>
+            <div class="page facts-wrapper" id="credits">
+                <!-- credits -->
+                <div class="facts">
+                    <h1>Mitwirkende</h1>
+                    <h2>Bilder</h2>
+                    <p><a href="https://www.robertmarclehmann.com/de" target="_blank" rel="noopener noreferrer">&copy; Robert Marc Lehmann</a></p>
+                    <h2>Idee & Umsetzung</h2>
+                    <div id="credit-images">
+                        <span>Alex</span>
+                        <span>Elke</span>
+                        <span>Lukas</span>
+                        <span>Sina</span>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </main>
 </body>

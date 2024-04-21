@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "ComicSans";
+    src: url("assets/font/cs.ttf") format("truetype");
+}
+
 html,
 body {
     padding: 0px;
@@ -8,6 +13,7 @@ body {
     overflow-y: auto;
     /* font-family: "Chilanka", cursive; */
     user-select: none;
+    font-family: "ComicSans", "Chilanka", cursive;
 }
 
 * {
